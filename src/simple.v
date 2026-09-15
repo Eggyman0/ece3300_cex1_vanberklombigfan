@@ -22,9 +22,7 @@ module simple(
 	      output reg [6:0] result);
    
 // add your code here
-	always @ (*)
-
-	begin 
+	always @ (*) begin 
 		case (a)
 			3'b000 : result = 7'b0000000;
 			3'b001 : result = 7'b0000001;
@@ -34,6 +32,7 @@ module simple(
 			3'b101 : result = 7'b0011111;
 			3'b110 : result = 7'b0111111;
 			3'b111 : result = 7'b1111111;
+			default : result = 0;
 		endcase
 	end
    
